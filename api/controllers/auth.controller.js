@@ -1,6 +1,7 @@
 import User from "../models/user.model.js";
 import bcryptjs from 'bcryptjs';
-export const signup=async(req,res)=>{
+import { errorHandler } from "../utils/error.js";
+export const signup=async(req,res,next)=>{
 
     // console.log(req.body);
     const {username,email,password} = req.body;
@@ -12,8 +13,24 @@ export const signup=async(req,res)=>{
         res.status(201).json("user created successfully");
 
     }catch(err){
-        res.status(500).json(err.message);
+        // res.status(500).json(err.message);
+        
 
+        //to handleError manually 
+
+        // next(errorHandler(550,'error from function'));
+
+        // output for this
+
+//         {
+// 	"success": false,
+// 	"statusCode": 550,
+// 	"message": "error from function"
+//          }
+
+
+        //handle middleware function
+        next(err);
     }
     
 };

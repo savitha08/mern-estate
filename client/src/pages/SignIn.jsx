@@ -79,3 +79,5 @@ export default function SignIn() {
 }
 
 
+// for redux persisit
+//npm i redux-persist

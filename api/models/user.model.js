@@ -18,8 +18,7 @@ const userSchema = new mongoose.Schema({
     },
     avatar:{
         type:String,
-        default:"https://tse1.mm.bing.net/th?id=OIP.XnpM4kcShhqe-aPu7rvF5wHaF3&pid=Api&rs=1&c=1&qlt=95&w=147&h=116",
-
+        default:"https://www.clipartkey.com/mpngs/m/152-1520367_user-profile-default-image-png-clipart-png-download.png",
     }
 },{timestamps:true}
 );

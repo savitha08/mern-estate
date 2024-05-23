@@ -17,7 +17,7 @@ const app = express();
 
 app.use(express.json());  //to solve undefined while connect to insomnia
 
-//npm i cookie-parser
+//npm i cookie-parser                                                                                     
 app.use(cookieParser());
 
  app.listen(3000,()=>{

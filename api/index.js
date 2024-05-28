@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRouter from './routes/user.route.js';
 import authRouter from './routes/auth.route.js';
+import listingRouter from './routes/listing.route.js'
 import cookieParser from 'cookie-parser';
 dotenv.config();
 
@@ -15,14 +16,18 @@ mongoose.connect(process.env.MONGO).then(()=>{
 
 const app = express();
 
-app.use(express.json());  //to solve undefined while connect to insomnia
-
 //npm i cookie-parser                                                                                     
 app.use(cookieParser());
 
+app.use(express.json());  //to solve undefined while connect to insomnia
+
+
+
  app.listen(3000,()=>{
+    
     console.log("Server is running on port 3000!");
 } )
+
 
 // this is how to create api route
 
@@ -37,6 +42,8 @@ app.use('/api/user',userRouter);
 
 app.use('/api/auth',authRouter);
 
+app.use('/api/listing',listingRouter);
+
 //middleware to handle error
 
 app.use((err,req,res,next)=>{
@@ -48,3 +55,4 @@ app.use((err,req,res,next)=>{
         message,
     });
 });   // inorder to use it use next(err) in catch
+

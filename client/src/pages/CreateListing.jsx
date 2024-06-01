@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import {
   getDownloadURL,
@@ -303,7 +304,11 @@ export default function CreateListing() {
           </div>
         </div>
         <div className='flex flex-col flex-1 gap-4'>
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 87297e1f138dcd4454dbaf8deb8cf10d8e7a7f23
                 <p className='font-semibold'>
             Images:
             <span className='font-normal text-gray-600 ml-2'>
@@ -363,3 +368,8 @@ export default function CreateListing() {
     </main>
   );
 }
+  
+
+
+
+

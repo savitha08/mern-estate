@@ -19,7 +19,7 @@ const app = express();
 //npm i cookie-parser                                                                                     
 app.use(cookieParser());
 
-app.use(express.json());  //to solve undefined while connect to insomnia
+app.use(express.json());//to solve undefined while connect to insomnia
 
 
 
